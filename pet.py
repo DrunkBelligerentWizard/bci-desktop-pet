@@ -177,11 +177,11 @@ class Pet():
             self.nonInteruptableAction = True
         elif self.action == 'idle' and self.idleCount > 5:
             rand = random.random()
-            if rand > 0.8:
+            if rand > 0.7:
                 self.action = 'run'
-            elif rand < 0.3:
+            elif rand < 0.2:
                 self.action = 'restAction1'
-            elif rand > 0.7: 
+            elif rand > 0.6: 
                 self.action = 'restAction2'
             
         if self.action == 'land' and self.lastAction == 'land':
