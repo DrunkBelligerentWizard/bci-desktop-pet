@@ -78,7 +78,7 @@ class Pet():
                 self.update_action()
             self.update_direction()
         # move left or right
-        if self.action in ['idle', 'restAction1', 'restAction2', "jump", 'fall']: pass
+        if self.action in ['idle', 'restAction1', 'restAction2']: pass
         elif self.dir == 'right':
             self.x += self.speed
             if self.action == 'jump':
