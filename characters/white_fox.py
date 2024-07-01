@@ -1,0 +1,35 @@
+from pathlib import Path
+fox = {
+    "name": "White Fox",
+    "frameHeight": 60,
+    "frameWidth": 60,
+    "defaultGroundLevel": 160,
+    "left": {
+        "idle": {"path": Path("characters\\white_fox_assets\\whitefox_idle_12fps_left.gif").absolute(), "frameCount": 8, "fps": 12},
+        "restAction1": {"path": Path("characters\\white_fox_assets\\whitefox_bark_12fps_left.gif").absolute(), "frameCount": 6, "fps": 12},
+        "restAction2": {"path": Path("characters\\white_fox_assets\\whitefox_sit02_12fps_left.gif").absolute(), "frameCount": 24, "fps": 12},
+        "run": {"path": Path("characters\\white_fox_assets\\whitefox_run_16fps_left.gif").absolute(), "frameCount": 8, "fps": 16},
+        "jump": {"path": Path("characters\\white_fox_assets\\whitefox_jump_12fps_left.gif").absolute(), "frameCount": 14, "fps": 20},
+        "fall": {"path": Path("characters\\white_fox_assets\\whitefox_fall_12fps_left.gif").absolute(), "frameCount": 5, "fps": 20},
+        "land": {"path": Path("characters\\white_fox_assets\\whitefox_land_12fps_left.gif").absolute(), "frameCount": 3, "fps": 12},
+        "wallGrab": {"path": Path("characters\\white_fox_assets\\whitefox_wallgrab_12fps_left.gif").absolute(), "frameCount": 8, "fps": 12},
+        "doubleJump": {"path": Path("characters\\white_fox_assets\\whitefox_jump_12fps_left.gif").absolute(), "frameCount": 14, "fps": 12},
+        "attack": {"path": Path("characters\\white_fox_assets\\whitefox_attack_12fps_left.gif").absolute(), "frameCount": 7, "fps": 12},
+        "hurt": {"path": Path("characters\\white_fox_assets\\whitefox_hurt_16fps_left.gif").absolute(), "frameCount": 7, "fps": 16},
+        "die": {"path": Path("characters\\white_fox_assets\\whitefox_die_16fps_left.gif").absolute(), "frameCount": 8, "fps": 16},
+    },
+    "right": {
+        "idle": {"path": Path("characters\\white_fox_assets\\whitefox_idle_12fps.gif").absolute(), "frameCount": 8, "fps": 12},
+        "restAction1": {"path": Path("characters\\white_fox_assets\\whitefox_bark_12fps.gif").absolute(), "frameCount": 6, "fps": 12},
+        "restAction2": {"path": Path("characters\\white_fox_assets\\whitefox_sit02_12fps.gif").absolute(), "frameCount": 24, "fps": 12},
+        "run": {"path": Path("characters\\white_fox_assets\\whitefox_run_16fps.gif").absolute(), "frameCount": 8, "fps": 16},
+        "jump": {"path": Path("characters\\white_fox_assets\\whitefox_jump_12fps.gif").absolute(), "frameCount": 14, "fps": 20},
+        "fall": {"path": Path("characters\\white_fox_assets\\whitefox_fall_12fps.gif").absolute(), "frameCount": 5, "fps": 20},
+        "land": {"path": Path("characters\\white_fox_assets\\whitefox_land_12fps.gif").absolute(), "frameCount": 3, "fps": 12},
+        "wallGrab": {"path": Path("characters\\white_fox_assets\\whitefox_wallgrab_12fps.gif").absolute(), "frameCount": 8, "fps": 12},
+        "doubleJump": {"path": Path("characters\\white_fox_assets\\whitefox_jump_12fps.gif").absolute(), "frameCount": 14, "fps": 12},
+        "attack": {"path": Path("characters\\white_fox_assets\\whitefox_attack_12fps.gif").absolute(), "frameCount": 7, "fps": 12},
+        "hurt": {"path": Path("characters\\white_fox_assets\\whitefox_hurt_16fps.gif").absolute(), "frameCount": 7, "fps": 16},
+        "die": {"path": Path("characters\\white_fox_assets\\whitefox_die_16fps.gif").absolute(), "frameCount": 8, "fps": 16},
+    }
+}

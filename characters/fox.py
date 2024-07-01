@@ -3,6 +3,7 @@ fox = {
     "name": "Fox",
     "frameHeight": 60,
     "frameWidth": 60,
+    "defaultGroundLevel": 160,
     "left": {
         "idle": {"path": Path("characters\\fox_assets\\fox_idle_12fps_left.gif").absolute(), "frameCount": 8, "fps": 12},
         "restAction1": {"path": Path("characters\\fox_assets\\fox_sit01_12fps_left.gif").absolute(), "frameCount": 8, "fps": 12},

@@ -32,7 +32,7 @@ class Pet():
         self.zoomFac = 2*self.width//1440 if petSize == "Default" else int(petSize)
         #self.zoomFac = 4
         self.x = self.width // 10
-        self.y = int(self.height - 2.66*self.pet["frameHeight"]) if groundLevel == -1 else self.height-groundLevel
+        self.y = self.height-self.pet['defaultGroundLevel'] if groundLevel == -1 else self.height-groundLevel
         self.groundLevel = self.y
         
         # processes gifs into a form that works with tkinter and put in one dictionary
@@ -59,7 +59,7 @@ class Pet():
         # create a label as a container for our image
         self.label = tk.Label(self.window, bd=0, bg='black')
         # create a window of size 128x128 pixels, at coordinates 0,0
-        self.window.geometry(f"{self.pet['frameHeight']* self.zoomFac}x{self.pet['frameWidth']* self.zoomFac}+{str(self.x)}+{str(self.y)}")
+        self.window.geometry(f"{self.pet['frameWidth']*self.zoomFac}x{self.pet['frameHeight']*self.zoomFac}+{str(self.x)}+{str(self.y)}")
 
         # add the image to our label
         self.label.configure(image=self.img)
@@ -74,11 +74,11 @@ class Pet():
     def update_movment(self):
         if not self.nonInteruptableAction:
             if time.time() > self.nextActionTS:
-                self.nextActionTS += 0.5
+                self.nextActionTS += 0.25
                 self.update_action()
             self.update_direction()
         # move left or right
-        if self.action in ['idle', 'restAction1', 'restAction2']: pass
+        if self.action in ['idle', 'restAction1', 'restAction2', "jump", 'fall']: pass
         elif self.dir == 'right':
             self.x += self.speed
             if self.action == 'jump':
@@ -114,7 +114,7 @@ class Pet():
             
 
         # create the window
-        self.window.geometry(f"{self.pet['frameHeight'] * self.zoomFac}x{self.pet['frameWidth']*self.zoomFac}+{str(self.x)}+{str(self.y)}")
+        self.window.geometry(f"{self.pet['frameWidth']*self.zoomFac}x{self.pet['frameHeight']*self.zoomFac}+{str(self.x)}+{str(self.y)}")
         # add the image to our label
         self.label.configure(image=self.img)
         # give window to geometry manager (so it will appear)
@@ -172,7 +172,7 @@ class Pet():
             self.action = 'jump'
         elif self.action != 'idle' and self.actionsSinceLastIdle >= 10 and random.random() > 1 - 0.02 * self.actionsSinceLastIdle:
             self.action = 'idle'
-        elif self.lastAction == 'run' and random.random() > 0.975:
+        elif self.lastAction == 'run' and random.random() > 0.96:
             self.action = 'jump'
             self.nonInteruptableAction = True
         elif self.action == 'idle' and self.idleCount > 5:
